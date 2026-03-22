@@ -1,0 +1,10 @@
+spring.application.name=my-portfolio-backend
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
+spring.datasource.hikari.maximun-pool-size=10
+spring.datasource.connection-timeout=20000
+spring.sql.init.mode=never
+file.upload.dir=src/main/resources/static/img/projects
+#importante para que Spring sirva lo que se escribe en disco SIN reiniciar
+spring.web.resources.static-locations=classpath:/static/,file:src/main/resources/static/
