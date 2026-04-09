@@ -1,0 +1,39 @@
+package com.portfolio.my_portfolio_backend.mapper;
+
+import com.portfolio.my_portfolio_backend.dto.SkillDto;
+import com.portfolio.my_portfolio_backend.model.Skill;
+
+public class SkillMapper {
+
+    public static SkillDto toDto(Skill skill){
+        if(skill == null){
+            return null;
+        }
+
+        SkillDto skillDto = new SkillDto();
+
+        skillDto.setId(skill.getId());
+        skillDto.setName(skill.getName());
+        skillDto.setIconClass(skill.getIconClass());
+        skillDto.setLevelPercentage(skill.getLevelPercentage());
+        skillDto.setPersonalInfoId(skill.getPersonalInfoId());
+
+        return skillDto;
+    }
+
+    public static Skill toEntity(SkillDto dto){
+        if(dto == null){
+            return null;
+        }
+
+        Skill skill = new Skill();
+
+        skill.setId(dto.getId());
+        skill.setName(dto.getName());
+        skill.setIconClass(dto.getIconClass());
+        skill.setLevelPercentage(dto.getLevelPercentage());
+        skill.setPersonalInfoId(dto.getPersonalInfoId());
+
+        return skill;
+    }
+}
